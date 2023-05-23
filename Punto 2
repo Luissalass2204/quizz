@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+char* getRevertText(const char* texto) {
+    int longitud = strlen(texto);
+    char* fraserev = (char*) malloc((longitud + 1) * sizeof(char)); 
+    
+    for (int i = 0; i < longitud; i++) {
+        fraserev[i] = texto[longitud - 1 - i]; 
+    }
+    
+    fraserev[longitud] = '\0'; 
+    
+    return fraserev; 
+}
+
+int main() {
+    char texto[100];
+    printf("Ingresa una cadena de texto: ");
+    scanf("%s", texto);
+    
+    char* reversedText = getRevertText(texto);
+
+    return 0;
+}

@@ -1,16 +1,16 @@
 Algoritmo DivisionCero
-    Definir x, y, resultado Como Real
+    Definir Divisor, Dividendo, resultado Como Real
     
     Escribir "Ingrese el dividendo:"
-    Leer x
+    Leer Dividendo
     
     Escribir "Ingrese el divisor:"
-    Leer y
+    Leer Divisor
     
-    Si y = 0 Entonces
+    Si Divisor = 0 Entonces
         Escribir "LoLa - Mento por 0 no se puede dividir. Okles."
     Sino
-        resultado = x / y
+		resultado <- Dividendo / Divisor
         Escribir "El resultado de la división es:", resultado
     FinSi
     

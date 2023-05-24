@@ -1,0 +1,18 @@
+punto 2 .
+Algoritmo RevertirTexto
+    Definir longitud, i como Entero
+    Definir texto, fraserev como Cadena
+
+    Escribir("Ingresa una cadena de texto: ")
+    Leer(texto)
+
+    longitud <- Longitud(texto)
+    fraserev <- ""
+
+    Para i <- longitud hasta 1 paso -1 Hacer
+        fraserev <- fraserev + SubCadena(texto, i, 1)
+    FinPara
+
+    Escribir("El texto revertido es: ", fraserev)
+
+FinAlgoritmo

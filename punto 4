@@ -17,17 +17,42 @@ Algoritmo RevertirTexto
 FinAlgoritmo
 
 punto 3
-Proceso getInvertNumber
-    Definir num, numeroInvertido Como Entero
-    Escribir "Ingrese un número:"
-    Leer num
+Algoritmo getInvertNumber
+
+	// Definir las variables
+
+	Definir numero, numeroInvertido Como Entero;
+
 	
-    numeroInvertido <- 0
+
+	// Solicitar al usuario que ingrese un número
+
+	Escribir "Ingrese un número: ";
+
+	Leer numero;
+
 	
-    Mientras num > 0 Hacer
-        numeroInvertido <- numeroInvertido * 10 + num % 10
-        num <- num / 10
-    FinMientras
+
+	// Inicializar la variable invertida
+
+	numeroInvertido <- 0;
+
 	
-    Escribir "El número invertido es:", numeroInvertido
-FinProceso
+
+	// Mientras el número sea mayor que cero, obtener el último dígito y multiplicarlo por una potencia de 10 según la posición, y sumarlo al número invertido
+
+	Mientras numero > 0 Hacer
+
+		numeroInvertido <- numeroInvertido + (numero % 10) * potencia(10,longitud(numero)-1);
+
+		numero <- numero / 10;
+
+	FinMientras
+
+	
+
+	// Devolver el número invertido
+
+	Escribir "El número invertido es: ", numeroInvertido;
+
+FinAlgoritmo

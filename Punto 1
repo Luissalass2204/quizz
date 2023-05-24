@@ -1,4 +1,4 @@
-Algoritmo DivisionConValidacion
+Algoritmo DivisionCero
     Definir x, y, resultado Como Real
     
     Escribir "Ingrese el dividendo:"

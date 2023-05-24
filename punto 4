@@ -17,29 +17,17 @@ Algoritmo RevertirTexto
 FinAlgoritmo
 
 punto 3
-Algoritmo InvertirNumero
-
-    Funcion getInvertNumber(numero: Entero) Devolver invertido: Entero
-        Definir invertido, digito Como Entero
-        invertido <- 0
-
-        Mientras numero <> 0 Hacer
-            invertido <- invertido * 10 + numero MOD 10
-            numero <- numero / 10
-        Fin Mientras
-
-        Devolver invertido
-    Fin Funcion
-
-    Procedimiento principal()
-        Definir numero, invertido Como Entero
-
-        Escribir "Ingrese un número:"
-        Leer numero
-
-        invertido <- getInvertNumber(numero)
-
-        Escribir "El número invertido es:", invertido
-    Fin Procedimiento
-
-Fin Algoritmo
+Proceso getInvertNumber
+    Definir num, numeroInvertido Como Entero
+    Escribir "Ingrese un número:"
+    Leer num
+	
+    numeroInvertido <- 0
+	
+    Mientras num > 0 Hacer
+        numeroInvertido <- numeroInvertido * 10 + num % 10
+        num <- num / 10
+    FinMientras
+	
+    Escribir "El número invertido es:", numeroInvertido
+FinProceso
